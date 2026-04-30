@@ -1,0 +1,116 @@
+[?25l[?2004h╭───────────────────────────────────────────────╮
+│ ⣽  Running: aws iam list-roles --no-cli-pager │
+╰┬──────────────────────────────────────────────╯
+[3A
+│ ⣻  Running: aws iam list-roles --no-cli-pager │
+
+[3A
+│ ⢿  Running: aws iam list-roles --no-cli-pager │
+
+[3A
+│ ⡿  Running: aws iam list-roles --no-cli-pager │
+
+[3A
+│ ⣟  Running: aws iam list-roles --no-cli-pager │
+
+[3A
+│ ⣯  Running: aws iam list-roles --no-cli-pager │
+
+[3A
+│ ⣷  Running: aws iam list-roles --no-cli-pager │
+
+[3A
+│ ⣾  Running: aws iam list-roles --no-cli-pager │
+
+[3A
+│ ⣽  Running: aws iam list-roles --no-cli-pager │
+
+[3A
+│ ⣻  Running: aws iam list-roles --no-cli-pager │
+
+[3A
+│ ⢿  Running: aws iam list-roles --no-cli-pager │
+
+[3A
+│ ⡿  Running: aws iam list-roles --no-cli-pager │
+
+[3A
+│ ⣟  Running: aws iam list-roles --no-cli-pager │
+
+[3A
+│ ⣯  Running: aws iam list-roles --no-cli-pager │
+
+[3A
+│ ⣷  Running: aws iam list-roles --no-cli-pager │
+
+[3A
+│ ⣾  Running: aws iam list-roles --no-cli-pager │
+
+[3A
+│ ⣽  Running: aws iam list-roles --no-cli-pager │
+
+[3A
+│ ⣻  Running: aws iam list-roles --no-cli-pager │
+
+[3A
+│ ⢿  Running: aws iam list-roles --no-cli-pager │
+
+[3A
+│ ⡿  Running: aws iam list-roles --no-cli-pager │
+
+[3A
+│ ⣟  Running: aws iam list-roles --no-cli-pager │
+
+[3A
+│ ⣯  Running: aws iam list-roles --no-cli-pager │
+
+[3A
+│ ⣷  Running: aws iam list-roles --no-cli-pager │
+
+[3A
+│ ⣾  Running: aws iam list-roles --no-cli-pager │
+
+[3A
+│ ⣽  Running: aws iam list-roles --no-cli-pager │
+
+[3A [J[2K[?2004l[?25h[?1002l[?1003l[?1006l╭────────────────────────────────────────────╮
+│ Running: aws iam list-roles --no-cli-pager │
+╰┬───────────────────────────────────────────╯
+ ├─  ?  Expect stdout to contain all of:     
+ │       - '"RoleName": "tubely-app"'        
+ │       - '"Service": "ec2.amazonaws.com"'  
+ > Command stdout:
+
+{
+    "Roles": [
+        {
+            "Path": "/aws-service-role/resource-explorer-2.amazonaws.com/",
+            "RoleName": "AWSServiceRoleForResourceExplorer",
+            "RoleId": "AROAVQZY724YBYCDWRALC",
+            "Arn": "arn:aws:iam::379687262000:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+            "CreateDate": "2026-04-23T07:18:37+00:00",
+            "AssumeRolePolicyDocument": {
+                "Version": "2012-10-17",
+                "Statement": [
+                    {
+                        "Effect": "Allow",
+                        "Principal": {
+                            "Service": "resource-explorer-2.amazonaws.com"
+                        },
+                        "Action": "sts:AssumeRole"
+                    }
+                ]
+            },
+            "MaxSessionDuration": 3600
+        },
+        {
+            "Path": "/aws-service-role/support.amazonaws.com/",
+            "RoleName": "AWSServiceRoleForSupport",
+            "RoleId": "AROAVQZY724YGCCYUQE2M",
+            "Arn": "arn:aws:iam::379687262000:role/aws-service-role/support.amazonaws.com/AWSServiceRoleForSupport",
+            "CreateDate": "2026-04-23T07:15:00+00:00",
+            "AssumeRolePolicyDocument": {
+                "Version": "2012-10-17",
+                "Statement": [
+                    {
+... output truncated

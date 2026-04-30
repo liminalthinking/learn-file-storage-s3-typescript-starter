@@ -1,0 +1,324 @@
+{
+  "info": {
+    "name": "Video Storage API",
+    "description": "API collection for the S3 TypeScript video storage project",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"user@example.com\",\n  \"password\": \"password123\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/login",
+              "host": ["{{base_url}}"],
+              "path": ["api", "login"]
+            }
+          }
+        },
+        {
+          "name": "Refresh Token",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"refreshToken\": \"your_refresh_token_here\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/refresh",
+              "host": ["{{base_url}}"],
+              "path": ["api", "refresh"]
+            }
+          }
+        },
+        {
+          "name": "Revoke Token",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"refreshToken\": \"your_refresh_token_here\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/revoke",
+              "host": ["{{base_url}}"],
+              "path": ["api", "revoke"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Users",
+      "item": [
+        {
+          "name": "Create User",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"newuser@example.com\",\n  \"password\": \"securepassword123\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/users",
+              "host": ["{{base_url}}"],
+              "path": ["api", "users"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Videos",
+      "item": [
+        {
+          "name": "Get All Videos",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/videos",
+              "host": ["{{base_url}}"],
+              "path": ["api", "videos"]
+            }
+          }
+        },
+        {
+          "name": "Create Video Metadata",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"My Video Title\",\n  \"description\": \"Video description\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/videos",
+              "host": ["{{base_url}}"],
+              "path": ["api", "videos"]
+            }
+          }
+        },
+        {
+          "name": "Get Video Details",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/videos/:videoId",
+              "host": ["{{base_url}}"],
+              "path": ["api", "videos", ":videoId"],
+              "variable": [
+                {
+                  "key": "videoId",
+                  "value": ""
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Delete Video",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/videos/:videoId",
+              "host": ["{{base_url}}"],
+              "path": ["api", "videos", ":videoId"],
+              "variable": [
+                {
+                  "key": "videoId",
+                  "value": ""
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Upload Video File",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "src": "path/to/video.mp4"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/api/video_upload/:videoId",
+              "host": ["{{base_url}}"],
+              "path": ["api", "video_upload", ":videoId"],
+              "variable": [
+                {
+                  "key": "videoId",
+                  "value": ""
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Thumbnails",
+      "item": [
+        {
+          "name": "Upload Thumbnail",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "src": "path/to/thumbnail.jpg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/api/thumbnail_upload/:videoId",
+              "host": ["{{base_url}}"],
+              "path": ["api", "thumbnail_upload", ":videoId"],
+              "variable": [
+                {
+                  "key": "videoId",
+                  "value": ""
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Thumbnail",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/thumbnails/:videoId",
+              "host": ["{{base_url}}"],
+              "path": ["api", "thumbnails", ":videoId"],
+              "variable": [
+                {
+                  "key": "videoId",
+                  "value": ""
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Admin",
+      "item": [
+        {
+          "name": "Reset",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/admin/reset",
+              "host": ["{{base_url}}"],
+              "path": ["admin", "reset"]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:3000",
+      "type": "string"
+    },
+    {
+      "key": "token",
+      "value": "",
+      "type": "string"
+    }
+  ]
+}
