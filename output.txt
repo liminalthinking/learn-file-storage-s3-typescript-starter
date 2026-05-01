@@ -1,116 +1,111 @@
-[?25l[?2004h╭───────────────────────────────────────────────╮
-│ ⣽  Running: aws iam list-roles --no-cli-pager │
-╰┬──────────────────────────────────────────────╯
+[?25l[?2004h╭──────────────────────────────────────────────────────────────╮
+│ ⣽  Running: aws cloudfront list-distributions --no-cli-pager │
+╰┬─────────────────────────────────────────────────────────────╯
 [3A
-│ ⣻  Running: aws iam list-roles --no-cli-pager │
+│ ⣻  Running: aws cloudfront list-distributions --no-cli-pager │
 
 [3A
-│ ⢿  Running: aws iam list-roles --no-cli-pager │
+│ ⢿  Running: aws cloudfront list-distributions --no-cli-pager │
 
 [3A
-│ ⡿  Running: aws iam list-roles --no-cli-pager │
+│ ⡿  Running: aws cloudfront list-distributions --no-cli-pager │
 
 [3A
-│ ⣟  Running: aws iam list-roles --no-cli-pager │
+│ ⣟  Running: aws cloudfront list-distributions --no-cli-pager │
 
 [3A
-│ ⣯  Running: aws iam list-roles --no-cli-pager │
+│ ⣯  Running: aws cloudfront list-distributions --no-cli-pager │
 
 [3A
-│ ⣷  Running: aws iam list-roles --no-cli-pager │
+│ ⣷  Running: aws cloudfront list-distributions --no-cli-pager │
 
 [3A
-│ ⣾  Running: aws iam list-roles --no-cli-pager │
+│ ⣾  Running: aws cloudfront list-distributions --no-cli-pager │
 
 [3A
-│ ⣽  Running: aws iam list-roles --no-cli-pager │
+│ ⣽  Running: aws cloudfront list-distributions --no-cli-pager │
 
 [3A
-│ ⣻  Running: aws iam list-roles --no-cli-pager │
+│ ⣻  Running: aws cloudfront list-distributions --no-cli-pager │
 
 [3A
-│ ⢿  Running: aws iam list-roles --no-cli-pager │
+│ ⢿  Running: aws cloudfront list-distributions --no-cli-pager │
 
 [3A
-│ ⡿  Running: aws iam list-roles --no-cli-pager │
+│ ⡿  Running: aws cloudfront list-distributions --no-cli-pager │
 
 [3A
-│ ⣟  Running: aws iam list-roles --no-cli-pager │
+│ ⣟  Running: aws cloudfront list-distributions --no-cli-pager │
 
 [3A
-│ ⣯  Running: aws iam list-roles --no-cli-pager │
+│ ⣯  Running: aws cloudfront list-distributions --no-cli-pager │
 
 [3A
-│ ⣷  Running: aws iam list-roles --no-cli-pager │
+│ ⣷  Running: aws cloudfront list-distributions --no-cli-pager │
 
 [3A
-│ ⣾  Running: aws iam list-roles --no-cli-pager │
+│ ⣾  Running: aws cloudfront list-distributions --no-cli-pager │
 
 [3A
-│ ⣽  Running: aws iam list-roles --no-cli-pager │
+│ ⣽  Running: aws cloudfront list-distributions --no-cli-pager │
 
 [3A
-│ ⣻  Running: aws iam list-roles --no-cli-pager │
+│ ⣻  Running: aws cloudfront list-distributions --no-cli-pager │
 
 [3A
-│ ⢿  Running: aws iam list-roles --no-cli-pager │
+│ ⢿  Running: aws cloudfront list-distributions --no-cli-pager │
 
 [3A
-│ ⡿  Running: aws iam list-roles --no-cli-pager │
+│ ⡿  Running: aws cloudfront list-distributions --no-cli-pager │
 
 [3A
-│ ⣟  Running: aws iam list-roles --no-cli-pager │
+│ ⣟  Running: aws cloudfront list-distributions --no-cli-pager │
 
 [3A
-│ ⣯  Running: aws iam list-roles --no-cli-pager │
+│ ⣯  Running: aws cloudfront list-distributions --no-cli-pager │
 
 [3A
-│ ⣷  Running: aws iam list-roles --no-cli-pager │
+│ ⣷  Running: aws cloudfront list-distributions --no-cli-pager │
 
-[3A
-│ ⣾  Running: aws iam list-roles --no-cli-pager │
-
-[3A
-│ ⣽  Running: aws iam list-roles --no-cli-pager │
-
-[3A [J[2K[?2004l[?25h[?1002l[?1003l[?1006l╭────────────────────────────────────────────╮
-│ Running: aws iam list-roles --no-cli-pager │
-╰┬───────────────────────────────────────────╯
- ├─  ?  Expect stdout to contain all of:     
- │       - '"RoleName": "tubely-app"'        
- │       - '"Service": "ec2.amazonaws.com"'  
+[3A [J[2K[?2004l[?25h[?1002l[?1003l[?1006l╭───────────────────────────────────────────────────────────╮
+│ Running: aws cloudfront list-distributions --no-cli-pager │
+╰┬──────────────────────────────────────────────────────────╯
+ ├─  ?  Expect stdout to contain all of:
+ │       - '"Status": "Deployed"'       
+ │       - 'cloudfront.net'             
+ │       - 's3'                         
  > Command stdout:
 
 {
-    "Roles": [
-        {
-            "Path": "/aws-service-role/resource-explorer-2.amazonaws.com/",
-            "RoleName": "AWSServiceRoleForResourceExplorer",
-            "RoleId": "AROAVQZY724YBYCDWRALC",
-            "Arn": "arn:aws:iam::379687262000:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
-            "CreateDate": "2026-04-23T07:18:37+00:00",
-            "AssumeRolePolicyDocument": {
-                "Version": "2012-10-17",
-                "Statement": [
-                    {
-                        "Effect": "Allow",
-                        "Principal": {
-                            "Service": "resource-explorer-2.amazonaws.com"
-                        },
-                        "Action": "sts:AssumeRole"
-                    }
-                ]
-            },
-            "MaxSessionDuration": 3600
-        },
-        {
-            "Path": "/aws-service-role/support.amazonaws.com/",
-            "RoleName": "AWSServiceRoleForSupport",
-            "RoleId": "AROAVQZY724YGCCYUQE2M",
-            "Arn": "arn:aws:iam::379687262000:role/aws-service-role/support.amazonaws.com/AWSServiceRoleForSupport",
-            "CreateDate": "2026-04-23T07:15:00+00:00",
-            "AssumeRolePolicyDocument": {
-                "Version": "2012-10-17",
-                "Statement": [
-                    {
+    "DistributionList": {
+        "Items": [
+            {
+                "Id": "E3D2YVJFCPY37J",
+                "ARN": "arn:aws:cloudfront::379687262000:distribution/E3D2YVJFCPY37J",
+                "ETag": "E23ZP02F085DFQ",
+                "Status": "Deployed",
+                "LastModifiedTime": "2026-04-30T07:57:06.400000+00:00",
+                "DomainName": "d35tp6eq7uugn6.cloudfront.net",
+                "Aliases": {
+                    "Quantity": 0
+                },
+                "Origins": {
+                    "Quantity": 1,
+                    "Items": [
+                        {
+                            "Id": "tubely-private-91249.s3.ap-southeast-2.amazonaws.com-mol6vcjodao",
+                            "DomainName": "tubely-private-91249.s3.ap-southeast-2.amazonaws.com",
+                            "OriginPath": "",
+                            "CustomHeaders": {
+                                "Quantity": 0
+                            },
+                            "S3OriginConfig": {
+                                "OriginAccessIdentity": "",
+                                "OriginReadTimeout": 30
+                            },
+                            "ConnectionAttempts": 3,
+                            "ConnectionTimeout": 10,
+                            "OriginShield": {
+                                "Enabled": false
+                            },
 ... output truncated
